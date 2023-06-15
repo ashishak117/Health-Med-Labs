@@ -18,7 +18,7 @@
     </button>
 
     <a href="dashboard.php" class="navbar-brand">
-      <span class="brand-icon"><i class="fa fa-gg"></i></span>
+      <!-- <span class="brand-icon"><i class="fa fa-gg"></i></span> -->
       <span class="brand-name">Health Med Labs</span>
     </a>
   </div><!-- .navbar-header -->
