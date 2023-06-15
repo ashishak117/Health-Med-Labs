@@ -60,7 +60,7 @@ echo "<script>alert('Email-id,Employee Id or Mobile Number already exist. Please
 <html lang="en">
 <head>
   
-  <title>ODLMS - Add Emplooyee Detail</title>
+  <title>Health Med Labs - Add Emplooyee Detail</title>
   
   <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
