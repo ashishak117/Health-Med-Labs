@@ -2,46 +2,35 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
-if (strlen($_SESSION['odlmsaid']==0)) {
+if (strlen($_SESSION['odlmseid']==0)) {
   header('location:logout.php');
   } else{
     if(isset($_POST['submit']))
   {
+    $eid=$_SESSION['odlmseid'];
+    $name=$_POST['name'];
+  $mobno=$_POST['mobilenumber'];
+  $email=$_POST['email'];
+  $address=$_POST['address'];
+  $sql="update tblemployee set Name=:name,MobileNumber=:mobilenumber,Email=:email,Address=:address where ID=:eid";
+     $query = $dbh->prepare($sql);
+     $query->bindParam(':name',$name,PDO::PARAM_STR);
+     $query->bindParam(':email',$email,PDO::PARAM_STR);
+     $query->bindParam(':mobilenumber',$mobno,PDO::PARAM_STR);
+     $query->bindParam(':address',$address,PDO::PARAM_STR);
+     $query->bindParam(':eid',$eid,PDO::PARAM_STR);
+$query->execute();
 
+        echo '<script>alert("Profile has been updated")</script>';
+     
 
-$title=$_POST['title'];
-$desc=$_POST['description'];
-$interpretation=$_POST['interpretation'];
-$price=$_POST['price'];
-
-
-$sql="insert into tbllabtest(TestTitle,TestDescription,TestInterpretation,Price)values(:title,:desc,:interpretation,:price)";
-$query=$dbh->prepare($sql);
-$query->bindParam(':title',$title,PDO::PARAM_STR);
-$query->bindParam(':desc',$desc,PDO::PARAM_STR);
-$query->bindParam(':interpretation',$interpretation,PDO::PARAM_STR);
-$query->bindParam(':price',$price,PDO::PARAM_STR);
- $query->execute();
-
-   $LastInsertId=$dbh->lastInsertId();
-   if ($LastInsertId>0) {
-    echo '<script>alert("Test detail has been added.")</script>';
-echo "<script>window.location.href ='add-test.php'</script>";
   }
-  else
-    {
-         echo '<script>alert("Something Went Wrong. Please try again")</script>';
-    }
-
-  
-}
-
-?>
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   
-  <title>ODLMS - Add Test Detail</title>
+  <title>Health Med Labs - Employee Profile</title>
   
   <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -58,7 +47,6 @@ echo "<script>window.location.href ='add-test.php'</script>";
   <script>
     Breakpoints();
   </script>
-  
 </head>
   
 <body class="menubar-left menubar-unfold menubar-light theme-primary">
@@ -70,48 +58,70 @@ echo "<script>window.location.href ='add-test.php'</script>";
 
 <!-- APP MAIN ==========-->
 <main id="app-main" class="app-main">
-    <div class="wrap">
-    <section class="app-content">
-      <div class="row">
+  <div class="wrap">
+  <section class="app-content">
+    <div class="row">
      
       <div class="col-md-12">
         <div class="widget">
           <header class="widget-header">
-            <h3 class="widget-title">Add Test Detail</h3>
+            <h3 class="widget-title">Employee Profile</h3>
           </header><!-- .widget-header -->
           <hr class="widget-separator">
           <div class="widget-body">
-           
+            <?php
+$eid=$_SESSION['odlmseid'];
+$sql="SELECT * from  tblemployee where ID=:eid";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':eid',$eid,PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $row)
+{               ?>
             <form class="form-horizontal" method="post">
               <div class="form-group">
-                <label for="exampleTextInput1" class="col-sm-3 control-label">Test Title:</label>
+                <label for="exampleTextInput1" class="col-sm-3 control-label">Employee ID:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="exampleTextInput1" name="title" value="" required='true'>
+                  <input type="text" class="form-control" id="exampleTextInput1" name="" value="<?php  echo $row->EmpID;?>" readonly='true'>
                 </div>
               </div>
               <div class="form-group">
-                <label for="email2" class="col-sm-3 control-label">Test Description:</label>
+                <label for="exampleTextInput1" class="col-sm-3 control-label">Name:</label>
                 <div class="col-sm-9">
-                  <textarea type="text" class="form-control" id="email2" name="description" value="" required="true"></textarea>
+                  <input type="text" class="form-control" id="exampleTextInput1" name="name" value="<?php  echo $row->Name;?>" required='true'>
                 </div>
               </div>
               <div class="form-group">
-                <label for="email2" class="col-sm-3 control-label">Test Interpretation:</label>
+                <label for="email2" class="col-sm-3 control-label">Address:</label>
                 <div class="col-sm-9">
-                  <textarea type="text" class="form-control" id="email2" name="interpretation" value="" required='true'></textarea>
+                  <textarea type="text" class="form-control" id="address" name="address" value="<?php  echo $row->UserName;?>" required="true"><?php  echo $row->Address;?></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email2" class="col-sm-3 control-label">Email:</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="email" name="email" value="<?php  echo $row->Email;?>" required='true'>
                 </div>
               </div>
                <div class="form-group">
-                <label for="email2" class="col-sm-3 control-label">Price:</label>
+                <label for="email2" class="col-sm-3 control-label">Contact Number:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="email2" name="price" value="" required='true'>
+                  <input type="text" class="form-control" id="email2" name="mobilenumber" value="<?php  echo $row->MobileNumber;?>" required='true' maxlength='10'>
                 </div>
               </div>
-             
-           
+              <div class="form-group">
+                <label for="email2" class="col-sm-3 control-label">Joining Date:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="email2" name="" value="<?php  echo $row->JoiningDate;?>" readonly="true">
+                </div>
+              </div>
+             <?php $cnt=$cnt+1;}} ?>
               <div class="row">
                 <div class="col-sm-9 col-sm-offset-3">
-                  <button type="submit" class="btn btn-success" name="submit">Add</button>
+                  <button type="submit" class="btn btn-success" name="submit">Update</button>
                 </div>
               </div>
             </form>
