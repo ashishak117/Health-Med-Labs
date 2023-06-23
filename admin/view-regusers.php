@@ -90,12 +90,12 @@ foreach($results as $row)
 	
 								</tbody>
                   <tfoot>
-                  <tr>
+                  <!-- <tr>
                  <th>S.No</th>
 										<th>Full Name</th>
 										<th>MobileNumber</th>
 										<th>Email</th>
-                  </tr>
+                  </tr> -->
                 </tfoot>
 							</table>
 						</div>

@@ -7,13 +7,12 @@ if (strlen($_SESSION['odlmseid']==0)) {
   } else{
 
 
-
   ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	
-	<title>ODLMS|| View Test Detail</title>
+	<title>Health Med Labs ||Sample Collected Detail</title>
 	
 	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -52,7 +51,13 @@ if (strlen($_SESSION['odlmseid']==0)) {
 			<div class="col-md-12">
 				<div class="widget">
 					<header class="widget-header">
-						<h4 class="widget-title">Test Details</h4>
+						<h4 class="m-t-0 header-title">Sample Collected Reports</h4>
+                                    <?php
+$fdate=$_POST['fromdate'];
+$tdate=$_POST['todate'];
+
+?>
+<h5 align="center" style="color:blue">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
 					</header><!-- .widget-header -->
 					<hr class="widget-separator">
 					<div class="widget-body">
@@ -61,18 +66,25 @@ if (strlen($_SESSION['odlmseid']==0)) {
 								<thead>
 									<tr>
 										<th>S.No</th>
-										<th>Test Title</th>
-										<th>Price</th>
-
-										<th>Action</th>
+										<th>Employee ID</th>
+										<th>Name</th>
+										<th>Sample Assign</th>
+										<th>Sample Collected</th>
+										<th>Remaining Sample</th>
 										
 									</tr>
 								</thead>
 							
 								<tbody>
                   <?php
-$sql="SELECT * from tbllabtest";
+                  $empid=$_SESSION['odlmsempid'];
+$sql="SELECT distinct tblemployee.EmpID,tblemployee.Name,tblappointment.AssignTo,sum(if(tbltracking.Status = 'Approved', 1, 0)) as testassigned,  sum(if(tbltracking.Status = 'Sample Collected', 1, 0)) AS samplecollected from  tblappointment
+join tblemployee on tblemployee.EmpID=tblappointment.AssignTo
+join tbltracking on tbltracking.AppointmentNumeber=tblappointment.AppointmentNumber
+
+where tblappointment.AssignTo=:empid && date(PostDate) between '$fdate' and '$tdate'   group by tblemployee.EmpID,tblemployee.Name";
 $query = $dbh -> prepare($sql);
+$query-> bindParam(':empid', $empid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
@@ -83,19 +95,23 @@ foreach($results as $row)
 {               ?>
 									<tr>
 										<td><?php echo htmlentities($cnt);?></td>
-										<td><?php  echo htmlentities($row->TestTitle);?></td>
-										<td><?php  echo htmlentities($row->Price);?></td>
-										<td><a href="view-singletest-detail.php?viewid=<?php echo htmlentities ($row->ID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+										<td><?php  echo htmlentities($row->EmpID);?></td>
+										<td><?php  echo htmlentities($row->Name);?></td>
+										<td><?php  echo htmlentities($ta=$row->testassigned);?></td>
+										<td><?php  echo htmlentities($sc=$row->samplecollected);?></td>
+										<td><?php  echo htmlentities($ta-$sc);?></td>
 									</tr>
 								 <?php $cnt=$cnt+1;}} ?> 
 	
 								</tbody>
                   <tfoot>
                   <!-- <tr>
-                   <th>S.No</th>
-                    <th>Test Title</th>
-                    <th>Price</th>
-                    <th>Action</th>
+                  <th>S.No</th>
+										<th>Employee ID</th>
+										<th>Name</th>
+										<th>Sample Assign</th>
+										<th>Sample Collected</th>
+										<th>Remaining Sample</th>
                   </tr> -->
                 </tfoot>
 							</table>

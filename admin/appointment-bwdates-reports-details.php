@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
-if (strlen($_SESSION['odlmseid']==0)) {
+if (strlen($_SESSION['odlmsaid']==0)) {
   header('location:logout.php');
   } else{
 
@@ -13,7 +13,7 @@ if (strlen($_SESSION['odlmseid']==0)) {
 <html lang="en">
 <head>
 	
-	<title>ODLMS|| View Test Detail</title>
+	<title>Health Med Labs || B/W Dates Appointment Detail</title>
 	
 	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -52,7 +52,13 @@ if (strlen($_SESSION['odlmseid']==0)) {
 			<div class="col-md-12">
 				<div class="widget">
 					<header class="widget-header">
-						<h4 class="widget-title">Test Details</h4>
+						<h4 class="m-t-0 header-title">Between Dates Reports</h4>
+                                    <?php
+$fdate=$_POST['fromdate'];
+$tdate=$_POST['todate'];
+
+?>
+<h5 align="center" style="color:blue">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
 					</header><!-- .widget-header -->
 					<hr class="widget-separator">
 					<div class="widget-body">
@@ -61,9 +67,11 @@ if (strlen($_SESSION['odlmseid']==0)) {
 								<thead>
 									<tr>
 										<th>S.No</th>
-										<th>Test Title</th>
-										<th>Price</th>
-
+										<th>Appointment Number</th>
+										<th>Patient Name</th>
+										<th>Mobile Number</th>
+										<th>Email</th>
+										<th>Status</th>
 										<th>Action</th>
 										
 									</tr>
@@ -71,7 +79,7 @@ if (strlen($_SESSION['odlmseid']==0)) {
 							
 								<tbody>
                   <?php
-$sql="SELECT * from tbllabtest";
+$sql="SELECT * from  tblappointment where date(PostDate) between '$fdate' and '$tdate'";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -83,19 +91,26 @@ foreach($results as $row)
 {               ?>
 									<tr>
 										<td><?php echo htmlentities($cnt);?></td>
-										<td><?php  echo htmlentities($row->TestTitle);?></td>
-										<td><?php  echo htmlentities($row->Price);?></td>
-										<td><a href="view-singletest-detail.php?viewid=<?php echo htmlentities ($row->ID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+										<td><?php  echo htmlentities($row->AppointmentNumber);?></td>
+										<td><?php  echo htmlentities($row->PatientName);?></td>
+										<td><?php  echo htmlentities($row->MobileNumber);?></td>
+										<td><?php  echo htmlentities($row->Email);?></td>
+                                       <td><?php  echo htmlentities($row->Status);?></td>                
+                 
+										<td><a href="view-appointment-detail.php?editid=<?php echo htmlentities ($row->ID);?>&&aptid=<?php echo htmlentities ($row->AppointmentNumber);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
 									</tr>
 								 <?php $cnt=$cnt+1;}} ?> 
 	
 								</tbody>
                   <tfoot>
                   <!-- <tr>
-                   <th>S.No</th>
-                    <th>Test Title</th>
-                    <th>Price</th>
-                    <th>Action</th>
+                  <th>S.No</th>
+										<th>Appointment Number</th>
+										<th>Patient Name</th>
+										<th>Mobile Number</th>
+										<th>Email</th>
+										<th>Status</th>
+										<th>Action</th>
                   </tr> -->
                 </tfoot>
 							</table>

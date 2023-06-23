@@ -13,7 +13,7 @@ if (strlen($_SESSION['odlmseid']==0)) {
 <html lang="en">
 <head>
 	
-	<title>ODLMS|| View Test Detail</title>
+	<title>Health Med Labs || New Appointment Detail</title>
 	
 	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -52,18 +52,34 @@ if (strlen($_SESSION['odlmseid']==0)) {
 			<div class="col-md-12">
 				<div class="widget">
 					<header class="widget-header">
-						<h4 class="widget-title">Test Details</h4>
+						<form id="basic-form" method="post">
+                                <div class="form-group">
+                                    <label>Search by Appointment No./Name/Mobile No.</label>
+                                    <input id="searchdata" type="text" name="searchdata" required="true" class="form-control" placeholder="Appointment No./Name/Mobile No."></div>
+                                
+                                <br>
+                                <button type="submit" class="btn btn-primary" name="search" id="submit">Search</button>
+                            </form>
 					</header><!-- .widget-header -->
-					<hr class="widget-separator">
+					 <?php
+if(isset($_POST['search']))
+{ 
+
+$sdata=$_POST['searchdata'];
+  ?>
+  <h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4>
+					
 					<div class="widget-body">
 						<div class="table-responsive">
 							<table class="table table-bordered table-hover js-basic-example dataTable table-custom">
 								<thead>
 									<tr>
 										<th>S.No</th>
-										<th>Test Title</th>
-										<th>Price</th>
-
+										<th>Appointment Number</th>
+										<th>Patient Name</th>
+										<th>Mobile Number</th>
+										<th>Email</th>
+									<th>Status</th>
 										<th>Action</th>
 										
 									</tr>
@@ -71,8 +87,10 @@ if (strlen($_SESSION['odlmseid']==0)) {
 							
 								<tbody>
                   <?php
-$sql="SELECT * from tbllabtest";
+              $empid=$_SESSION['odlmsempid'];
+$sql="SELECT * from tblappointment where AppointmentNumber like '$sdata%' || PatientName like '$sdata%' || MobileNumber like '$sdata%' && AssignTo=:empid";
 $query = $dbh -> prepare($sql);
+$query-> bindParam(':empid', $empid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
@@ -83,21 +101,42 @@ foreach($results as $row)
 {               ?>
 									<tr>
 										<td><?php echo htmlentities($cnt);?></td>
-										<td><?php  echo htmlentities($row->TestTitle);?></td>
-										<td><?php  echo htmlentities($row->Price);?></td>
-										<td><a href="view-singletest-detail.php?viewid=<?php echo htmlentities ($row->ID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+										<td><?php  echo htmlentities($row->AppointmentNumber);?></td>
+										<td><?php  echo htmlentities($row->PatientName);?></td>
+										<td><?php  echo htmlentities($row->MobileNumber);?></td>
+										<td><?php  echo htmlentities($row->Email);?></td>
+                                        <?php if($row->Status==""){ ?>
+
+                     <td><?php echo "Not Updated Yet"; ?></td>
+<?php } else { ?>                  <td><?php  echo htmlentities($row->Status);?>
+                  </td>
+                  <?php } ?>             
+                 
+										<td><a href="view-assigned-appointment-detail.php?editid=<?php echo htmlentities ($row->ID);?>&&aptid=<?php echo htmlentities ($row->AppointmentNumber);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+										
 									</tr>
-								 <?php $cnt=$cnt+1;}} ?> 
+								
 	
 								</tbody>
                   <tfoot>
                   <!-- <tr>
-                   <th>S.No</th>
-                    <th>Test Title</th>
-                    <th>Price</th>
-                    <th>Action</th>
+                  <th>S.No</th>
+										<th>Appointment Number</th>
+										<th>Patient Name</th>
+										<th>Mobile Number</th>
+										<th>Email</th>
+										<th>Status</th>
+										<th>Action</th>
                   </tr> -->
                 </tfoot>
+                <?php 
+$cnt=$cnt+1;
+} } else { ?>
+  <tr>
+    <td colspan="8"> No record found against this search</td>
+
+  </tr>
+  <?php } }?>
 							</table>
 						</div>
 					</div><!-- .widget-body -->

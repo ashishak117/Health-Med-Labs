@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
-if (strlen($_SESSION['odlmseid']==0)) {
+if (strlen($_SESSION['odlmsuid']==0)) {
   header('location:logout.php');
   } else{
 
@@ -12,8 +12,12 @@ if (strlen($_SESSION['odlmseid']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<title>ODLMS|| View Test Detail</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="description" content="Admin, Dashboard, Bootstrap" />
+	<link rel="shortcut icon" sizes="196x196" href="assets/images/logo.png">
+	<title>Health Med Labs || View Test Detail</title>
 	
 	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -61,9 +65,10 @@ if (strlen($_SESSION['odlmseid']==0)) {
 								<thead>
 									<tr>
 										<th>S.No</th>
-										<th>Test Title</th>
-										<th>Price</th>
-
+										<th>Appointment Number</th>
+										<th>Patient Name</th>
+										<th>Mobile Number</th>
+										<th>Email</th>
 										<th>Action</th>
 										
 									</tr>
@@ -85,7 +90,7 @@ foreach($results as $row)
 										<td><?php echo htmlentities($cnt);?></td>
 										<td><?php  echo htmlentities($row->TestTitle);?></td>
 										<td><?php  echo htmlentities($row->Price);?></td>
-										<td><a href="view-singletest-detail.php?viewid=<?php echo htmlentities ($row->ID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+										<td><a href="edit-test-detail.php?editid=<?php echo htmlentities ($row->ID);?>"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
 									</tr>
 								 <?php $cnt=$cnt+1;}} ?> 
 	

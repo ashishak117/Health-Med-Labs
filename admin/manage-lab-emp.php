@@ -107,13 +107,13 @@ foreach($results as $row)
 								</tbody>
                   <tfoot>
                   <tr>
-                  <th>S.No</th>
+                  <!-- <th>S.No</th>
 										<th>Employee ID</th>
 										<th>Name</th>
 										<th>MobileNumber</th>
 										<th>Email</th>
 										<th>Action</th>
-                  </tr>
+                  </tr> -->
                 </tfoot>
 							</table>
 						</div>
