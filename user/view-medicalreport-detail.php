@@ -13,7 +13,7 @@ if (strlen($_SESSION['odlmsuid']==0)) {
 <html lang="en">
 <head>
 	
-	<title>ODLMS|| View Medical Report</title>
+	<title>Health Med Labs|| View Medical Report</title>
 	
 	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">

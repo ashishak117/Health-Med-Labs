@@ -91,12 +91,12 @@ foreach($results as $row)
 	
 								</tbody>
                   <tfoot>
-                  <tr>
+                  <!-- <tr>
                    <th>S.No</th>
                     <th>Test Title</th>
                     <th>Price</th>
                     <th>Action</th>
-                  </tr>
+                  </tr> -->
                 </tfoot>
 							</table>
 						</div>

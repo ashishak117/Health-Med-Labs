@@ -13,7 +13,7 @@ if (strlen($_SESSION['odlmsuid']==0)) {
 <html lang="en">
 <head>
 	
-	<title>ODLMS|| Search Appointment Detail</title>
+	<title>Health Med Labs || Search Appointment Detail</title>
 	
 	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -118,7 +118,7 @@ foreach($results as $row)
 								</tbody>
                   <tfoot>
                   	
-                  <tr>
+                  <!-- <tr>
                    <th>S.No</th>
 										<th>Appointment Number</th>
 										<th>Patient Name</th>
@@ -126,7 +126,7 @@ foreach($results as $row)
 										<th>Email</th>
 										<th>Status</th>
 										<th>Action</th>
-                  </tr>
+                  </tr> -->
                 </tfoot>
                 <?php 
 $cnt=$cnt+1;
