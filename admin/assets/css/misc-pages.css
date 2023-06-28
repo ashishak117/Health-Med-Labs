@@ -1,7 +1,8 @@
-body.simple-page {
-  background-image: linear-gradient(to bottom right, #0B1F52, #58FFE6);
-  padding-top: 8%; }
 
+body.simple-page {
+  background-image: linear-gradient(to bottom right, #094faa, #6ce6e3);
+  padding-top: 8%;
+}
 .simple-page-wrap {
   width: 380px;
   margin: 0 auto; }

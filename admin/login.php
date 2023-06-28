@@ -55,20 +55,38 @@ echo "<script>alert('Invalid Details');</script>";
 	<link rel="stylesheet" href="assets/css/core.css">
 	<link rel="stylesheet" href="assets/css/misc-pages.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+	<style>
+		body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: right;
+      width:65%;
+    }
+	</style>
 </head>
 <body class="simple-page">
 	<div id="back-to-home">
 		<a href="../index.php" class="btn btn-outline btn-default"><i class="fa fa-home animated zoomIn"></i></a>
 	</div>
+	<div class="image-container">
+          <img class="" src="images/loginadm2.png" alt="image">
+    </div>
 	<div class="simple-page-wrap">
 		<div class="simple-page-logo animated swing">
 			
-				
+				<!-- <span style="color: black"><i class="fa fa-gg"></i></span> -->
 				<span style="color: white">HEALTH MED LABS</span>
 			
 		</div><!-- logo -->
 		<div class="simple-page-form animated flipInY" id="login-form">
-	<h4 class="form-title m-b-xl text-center">Sign In</h4>
+	<h4 class="form-title m-b-xl text-center">Admin Sign In</h4>
 	<form action="#" method="post">
 		<div class="form-group">
 			<input type="text" class="form-control" placeholder="User Name" required="true" name="username" value="<?php if(isset($_COOKIE["user_login"])) { echo $_COOKIE["user_login"]; } ?>" >

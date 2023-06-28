@@ -80,7 +80,7 @@
 	</div>
 	<div class="content">
 			<div class="about-section" id="aboutus">
-				<div class="container">
+				<div class="container"><br/><br/><br/><br/>
 					<h3>HOW SAMPLE COLLECTION</h3><br>
 					<h4>How Does It Works?</h4></br>
 					    <div class="about-grids">
@@ -102,7 +102,7 @@
 								<div class="clearfix"></div>
 						</div>
 					</div>
-				</div>
+				</div>	
 		
 	<div class="gallery" id="gallery">
 		<div class="container">

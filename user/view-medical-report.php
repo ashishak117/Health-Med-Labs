@@ -102,7 +102,7 @@ foreach($results as $row)
 								 <?php $cnt=$cnt+1;}} ?> 
 	
 								</tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                   <tr>
                    <th>S.No</th>
 										<th>Appointment Number</th>
@@ -112,7 +112,7 @@ foreach($results as $row)
 										<th>Status</th>
 										<th>Action</th>
                   </tr>
-                </tfoot>
+                </tfoot> -->
 							</table>
 						</div>
 					</div><!-- .widget-body -->

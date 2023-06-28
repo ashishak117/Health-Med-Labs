@@ -42,16 +42,16 @@ ul{
 body{
 	padding:0 0;
 	margin:0 0; 
-	font-family: 'OpenSans-Regular'
+	font-family: 'Play-Regular'
 }
 .header{
-	background: url("../images/banner.jpg") no-repeat 0px 0px;
+	background: url("../images/Home1.png") no-repeat 0px 0px;
 	background-size: cover;
 	min-height:800px;
 }
 .header-top {
-  padding: 1.2em 0;
-  background: #0B1F52;
+  padding: 1.0em 0;
+  background: linear-gradient(to bottom right, #ffffff, #ffffff);
  }
 .logo{
 	float: left;
@@ -79,25 +79,25 @@ body{
 	margin: 0 0.8em;
 }
 .top-menu ul li a {
-  color: #ffffff;
+color: #370083;
   text-decoration: none;
   font-size: 1.3em;
   text-transform: capitalize;
-  font-family: 'OpenSans-Regular';
+  font-family: 'Play-Bold';
 }
 .top-menu ul li a.active {
-  color: #ffffff;
+  color: #370083;
 }
 .top-menu ul li a:hover {
-  color: #58FFE6;
+  color: #ff0099;
 }
 span.menu {
     display: none;
 }
 .about-section {
   text-align: center;
-   padding: 4em 0;
-   background: #97E0BE;
+   padding: 1em 0;
+   background: #ffffff;
 
 }
 .about-section h3 {
@@ -193,13 +193,13 @@ span.glyphicon.glyphicon-pushpin {
 .gallery h3{
   font-size: 3em;
   text-transform: capitalize;
-  color: #fff;
+  color: #000000;
   font-family: 'Play-Regular';
   text-align:center;
 }
 .gallery {
   padding: 4em 0;
-  background:#0B1F52;
+  background:#ffffff;
   }
 .da-thumbs {
 	list-style: none;
@@ -895,7 +895,7 @@ p.smith a {
     margin-top: 1em;
 }
 .header {
-    min-height: 404px;
+    min-height: 395px;
  background: url("../images/banner.jpg") no-repeat -155px 0px;
   background-size: cover;
 }
