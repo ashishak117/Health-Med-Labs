@@ -512,9 +512,9 @@ img.zoom-img {
 	border: none;
 }
 .footer-section{
-	padding:2em 0;
+	padding:10em 0;
 	text-align:center;
-	background:#0B1F52;
+	background:#ececec;
 }
 .footer-bottom {
 	margin-top: 1em;
@@ -532,7 +532,7 @@ img.zoom-img {
 	
 }
 .footer-bottom a:hover {
-	color: #555;
+	color: #f9f9f9;
 }
 .footer-bottom p a {
 	margin: 0 6px 0 6px;
