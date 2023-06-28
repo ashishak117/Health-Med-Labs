@@ -81,7 +81,7 @@
 	<div class="content">
 			<div class="about-section" id="aboutus">
 				<div class="container"><br/><br/><br/><br/>
-					<h3>HOW SAMPLE COLLECTION</h3><br>
+					<h3>SAMPLE COLLECTION</h3><br>
 					<h4>How Does It Works?</h4></br>
 					    <div class="about-grids">
 							<div class="col-md-4 about-grid">
