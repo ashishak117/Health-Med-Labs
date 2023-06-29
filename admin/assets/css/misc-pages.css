@@ -4,7 +4,7 @@ body.simple-page {
   padding-top: 8%;
 }
 .simple-page-wrap {
-  width: 380px;
+  width: 280px;
   margin: 0 auto; }
 
 .simple-page-logo {
@@ -15,7 +15,7 @@ body.simple-page {
     color: #fff; }
 
 .simple-page-form {
-  background-color: #fff;
+  background-color: #ffffff48;
   border-radius: 10px;
   padding: 24px;
   margin-bottom: 24px; }

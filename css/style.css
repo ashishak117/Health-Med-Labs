@@ -52,6 +52,7 @@ body{
 .header-top {
   padding: 1.0em 0;
   background: linear-gradient(to bottom right, #ffffff, #ffffff);
+  box-shadow: 0 5px 8px 1px rgba(0,0,0,.09);
  }
 .logo{
 	float: left;

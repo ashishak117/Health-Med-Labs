@@ -2,8 +2,8 @@ body.simple-page {
   background-image: linear-gradient(to bottom right, #094faa, #6ce6e3);
   padding-top: 8%; }
 
-.simple-page-wrap {
-  width: 380px;
+.simple-page- {
+  width: 280px;
   margin: 0 auto; }
 
 .simple-page-logo {
@@ -13,11 +13,12 @@ body.simple-page {
   .simple-page-logo a {
     color: #fff; }
 
-.simple-page-form {
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 24px;
-  margin-bottom: 24px; }
+    .simple-page-form {
+      background-color: #ffffff48;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px; }
+      
   .simple-page-form .form-group {
     margin-bottom: 32px; }
   .simple-page-form input,
@@ -34,7 +35,7 @@ body.simple-page {
 
 .simple-page-footer p {
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 5px; }
 
 .simple-page-footer a {
   color: #0B1F52;

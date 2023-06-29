@@ -13,11 +13,11 @@ body.simple-page {
   .simple-page-logo a {
     color: #fff; }
 
-.simple-page-form {
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 24px;
-  margin-bottom: 24px; }
+    .simple-page-form {
+      background-color: #ffffff48;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px; }
   .simple-page-form .form-group {
     margin-bottom: 32px; }
   .simple-page-form input,
