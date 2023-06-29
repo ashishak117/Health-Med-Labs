@@ -51,7 +51,7 @@ body{
 }
 .header-top {
   padding: 1.0em 0;
-  background: linear-gradient(to bottom right, #ffffff, #ffffff);
+  background: linear-gradient(to bottom right, #d5d3eb #E9F1FA);
  }
 .logo{
 	float: left;
@@ -81,9 +81,9 @@ body{
 .top-menu ul li a {
 color: #370083;
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.6em;
   text-transform: capitalize;
-  font-family: 'Play-Bold';
+  font-family: 'Play-Regular';
 }
 .top-menu ul li a.active {
   color: #370083;
@@ -97,7 +97,7 @@ span.menu {
 .about-section {
   text-align: center;
    padding: 1em 0;
-   background: #ffffff;
+   background: #e9f1fa;
 
 }
 .about-section h3 {
@@ -199,7 +199,7 @@ span.glyphicon.glyphicon-pushpin {
 }
 .gallery {
   padding: 4em 0;
-  background:#ffffff;
+  background:#e9f1fa;
   }
 .da-thumbs {
 	list-style: none;
@@ -225,7 +225,7 @@ span.glyphicon.glyphicon-pushpin {
 }
 .da-thumbs li a div {
   position: absolute;
-  background: rgba(135, 221, 179, 0.84);
+  background: rgba(202,200,229, 0.84);
   width: 100%;
   height: 100%;
 }
