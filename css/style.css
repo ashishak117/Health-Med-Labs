@@ -47,7 +47,7 @@ body{
 .header{
 	background: url("../images/Home1.png") no-repeat 0px 0px;
 	background-size: cover;
-	min-height:800px;
+	min-height:1000px;
 }
 .header-top {
   padding: 1.0em 0;
@@ -201,6 +201,7 @@ span.glyphicon.glyphicon-pushpin {
 .gallery {
   padding: 4em 0;
   background:#ffffff;
+  /* background: url("../images/Home1.png") no-repeat 1036px 862.3px; */
   }
 .da-thumbs {
 	list-style: none;
@@ -515,14 +516,14 @@ img.zoom-img {
 .footer-section{
 	padding:2em 0;
 	text-align:center;
-	background:#0B1F52;
+	background:#ffffff;
 }
 .footer-bottom {
-	margin-top: 1em;
+	margin-top: 2em;
 }
 .footer-bottom p {
 	font-size: 0.9em;
-	color: #d5d5d3;
+	color: #0B1F52;
 	font-weight: 400;
 }
 .footer-bottom a {

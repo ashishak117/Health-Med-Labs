@@ -209,6 +209,9 @@
 
 
 	<div class="footer-section">
+		        <div class="container">
+          <img class="center" src="images/Social-Media.png" alt="">
+        </div>
 						<div class="container">
 							<div class="footer-bottom">
 						<p>HEALTH MED LABS @ 2023</p>
