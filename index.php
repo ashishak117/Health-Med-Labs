@@ -60,7 +60,7 @@
 						<ul>
 						<li><a href="index.php" class="active scroll">home</a></li>
 						<li><a href="#aboutus" class="scroll">Collections</a></li>
-						<li><a href="#gallery" class="scroll">gallery</a></li>
+						<li><a href="#gallery" class="scroll">Testimonials</a></li>
 						<li><a href="admin/login.php">Admin</a></li>
 						<li><a href="user/login.php">Users</a></li>
 						<li><a href="employee/login.php">Employee</a></li>
@@ -106,7 +106,7 @@
 		
 	<div class="gallery" id="gallery">
 		<div class="container">
-			<h3>gallery</h3>
+			<h3>Testimonials</h3>
 			<div class="gallery-grids">
 			<section>
 				<ul id="da-thumbs" class="da-thumbs">
@@ -114,8 +114,8 @@
 						<a href="images/g1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g1.jpg" alt="" />
 							<div>
-								<h5>pic 8</h5>
-								<span>about</span>
+								<h5>Mr. Anil Jaywant</h5>
+								<span>Very Supportive & Co-operative Staff Quality work, as well as report turnaround time</span>
 							</div>
 						</a>
 					</li>
@@ -123,8 +123,8 @@
 						<a href="images/g2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g2.jpg" alt="" />
 							<div>
-								<h5>pic 9</h5>
-								<span>about</span>
+								<h5>Mr. Nitin Shinde</h5>
+								<span>Quality work, Impress with the management of firm as well as turn around time of the reports</span>
 							</div>
 						</a>
 					</li>
@@ -132,8 +132,8 @@
 						<a href="images/g3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g3.jpg" alt="" />
 							<div>
-								<h5>pic 1</h5>
-								<span>about</span>
+								<h5>Mr. Somesh Kulkarni</h5>
+								<span>We have regularly working with Ashturkar pathology lab, and feeling very great to get good service from them</span>
 							</div>
 						</a>
 					</li>
@@ -141,8 +141,8 @@
 						<a href="images/g4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g4.jpg" alt="" />
 							<div>
-								<h5>pic 2</h5>
-								<span>about</span>
+								<h5>Minal Sharma</h5>
+								<span>The staff of this lab is very professional, polite, and accurate in lab testing. And home collection and timely delivery of reports at home are also very efficient</span>
 							</div>
 						</a>
 					</li>
@@ -150,8 +150,8 @@
 						<a href="images/g5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g5.jpg" alt="" />
 							<div>
-								<h5>pic 3</h5>
-								<span>about</span>
+								<h5>Nila Gupta</h5>
+								<span>Health Med Labs kept me at ease during the sample collection process, Based on my experience. I can assure you that, be it quality or punctuality, Health Med Labs is one name to trust and depend on</span>
 							</div>
 						</a>
 					</li>
@@ -159,8 +159,8 @@
 						<a href="images/g6.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g6.jpg" alt="" />
 							<div>
-								<h5>pic 4</h5>
-								<span>about</span>
+								<h5>Mr. Aditya Singh</h5>
+								<span>Lab at home service is very prompt. I booked a blood test for my mother, blood sample was collected and Reports were also delivered early. the Best Health Med Labs in Bangalore</span>
 							</div>
 						</a>
 					</li>
@@ -168,8 +168,8 @@
 						<a href="images/g7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g7.jpg" alt="" />
 							<div>
-								<h5>pic 5</h5>
-								<span>about</span>
+								<h5>Neha Kadam</h5>
+								<span>Thanks for the seamless service. Based on my experience, I can assure you that, be it quality or punctuality, Health Med Labs is one name to trust and depend on</span>
 							</div>
 						</a>
 					</li>
@@ -177,8 +177,8 @@
 						<a href="images/g8.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g8.jpg" alt="" />
 							<div>
-								<h5>pic 6</h5>
-								<span>about</span>
+								<h5>Sanket Patil</h5>
+								<span>Best service,excellent management. Quick results as compared to other labs. Trained staff. Would recommend to opt for their services to everyone.</span>
 							</div>
 						</a>
 					</li>
@@ -186,8 +186,8 @@
 						<a href="images/g9.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g9.jpg" alt="" />
 							<div>
-								<h5>pic 7</h5>
-								<span>about</span>
+								<h5>Ashish M</h5>
+								<span>Finest Lab at your doorstep. Quick and seamless process with humble and well trained staff. Delivers as promised. Highly recommended</span>
 							</div>
 						</a>
 					</li>
@@ -209,14 +209,55 @@
 
 
 	<div class="footer-section">
-		        <div class="container">
-          <img class="center" src="images/Social-Media.png" alt="">
-        </div>
-						<div class="container">
+		        
+						<!-- <div class="container">
 							<div class="footer-bottom">
 						<p>HEALTH MED LABS @ 2023</p>
 									</div>
-							<script type="text/javascript">
+							
+			</div> -->
+			<!-- Site footer -->
+			<link rel="stylesheet" href="css/foot.css">
+			  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+			   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+   			  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+			  <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Test At Home</a></li>
+                            <li><a href="#">Quick Report</a></li>
+                            <li><a href="#">Consulting Doctor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Health Med Labs</h3>
+                        <p> It is a platform that allows patients, 
+medical practitioners, and other authorized users to access and manage 
+medical test results and related information via the internet. The system is 
+designed to provide a convenient and secure way for patients to receive and 
+review lab test results, as well as for medical practitioners to monitor and 
+manage patients’ health.</p>
+                    </div>
+					<div class="container">
+          <img class="center" src="images/Social-Media.png" alt="">
+        </div>	
+                    <!-- <div class="col item social"><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a></a><a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a></div>
+                </div> -->
+                <p class="copyright">Health Med Labs © 2023</p>
+				<script type="text/javascript">
 						$(document).ready(function() {
 							/*
 							var defaults = {
@@ -233,6 +274,8 @@
 					</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 				</div>
-			</div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

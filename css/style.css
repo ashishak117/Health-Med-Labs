@@ -51,7 +51,7 @@ body{
 }
 .header-top {
   padding: 1.0em 0;
-  background: linear-gradient(to bottom right, #ffffff, #ffffff);
+  background: linear-gradient(to bottom right, #e3e3e3, #221bdc);
   box-shadow: 0 5px 8px 1px rgba(0,0,0,.09);
  }
 .logo{
@@ -519,7 +519,7 @@ img.zoom-img {
 	background:#ffffff;
 }
 .footer-bottom {
-	margin-top: 2em;
+	margin-top: 0em;
 }
 .footer-bottom p {
 	font-size: 0.9em;
