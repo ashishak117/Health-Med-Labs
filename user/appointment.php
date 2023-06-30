@@ -7,8 +7,7 @@ if (strlen($_SESSION['odlmsuid']==0)) {
   } else{
 
 if(isset($_POST['submit']))
-  {
-
+{
 $uid=$_SESSION['odlmsuid'];
 $pname=$_POST['pname'];
 $gender=$_POST['gender'];
@@ -21,11 +20,25 @@ $aptnumber=mt_rand(100000000, 999999999);
 $pres=$_FILES["pres"]["name"];
 $extension = substr($pres,strlen($pres)-4,strlen($pres));
 $allowed_extensions = array(".jpg","jpeg",".png",".gif",".pdf");
+// function isDateGreaterThanCurrent($aptdate) {
+// 	// Get the current date
+// 	$currentDate = date('Y-m-d');
+  
+// 	// Compare the selected date with the current date
+// 	if ($aptdate < $currentDate) {
+// 		return true;
+// 	}
+// 	return false;
+//   } 
 if(!empty($pres))
 {
 if(!in_array($extension,$allowed_extensions))
 {
 echo "<script>alert('Prescription has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+}
+$currentDate=date('d-m-Y');
+if ($aptdate<$currentDate) {
+	echo "<script>alert('Appointment date invalid');</script>";
 }
 else
 {

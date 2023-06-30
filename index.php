@@ -208,9 +208,14 @@
 <!--//gallery-->
 
 
+<<<<<<< HEAD
 	<div class="footer-section">
 		        
 						<!-- <div class="container">
+=======
+	<!-- <div class="footer-section">
+						<div class="container">
+>>>>>>> 67fac462b9139791b3f9206df35750e402ade923
 							<div class="footer-bottom">
 						<p>HEALTH MED LABS @ 2023</p>
 									</div>
@@ -259,14 +264,14 @@ manage patients’ health.</p>
                 <p class="copyright">Health Med Labs © 2023</p>
 				<script type="text/javascript">
 						$(document).ready(function() {
-							/*
-							var defaults = {
-					  			containerID: 'toTop', // fading element id
-								containerHoverID: 'toTopHover', // fading element hover id
-								scrollSpeed: 1200,
-								easingType: 'linear' 
-					 		};
-							*/
+							
+							// var defaults = {
+					  		// 	containerID: 'toTop', // fading element id
+							// 	containerHoverID: 'toTopHover', // fading element hover id
+							// 	scrollSpeed: 1200,
+							// 	easingType: 'linear' 
+					 		// };
+							
 							
 							$().UItoTop({ easingType: 'easeOutQuart' });
 							
@@ -274,8 +279,54 @@ manage patients’ health.</p>
 					</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 				</div>
+<<<<<<< HEAD
             </div>
         </footer>
     </div>
+=======
+			</div> -->
+			  <!-- Site footer -->
+			  <link rel="stylesheet" href="css/foot.css">
+			  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+			   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+   			  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+			  <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Test At Home</a></li>
+                            <li><a href="#">Quick Report</a></li>
+                            <li><a href="#">Consulting Doc</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Health Med Labs</h3>
+                        <p> it is a platform that allows patients, 
+medical practitioners, and other authorized users to access and manage 
+medical test results and related information via the internet. The system is 
+designed to provide a convenient and secure way for patients to receive and 
+review lab test results, as well as for medical practitioners to monitor and 
+manage patients’ health.</p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a></a><a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Health Med Labs © 2023</p>
+            </div>
+        </footer>
+    </div>
+   
+>>>>>>> 67fac462b9139791b3f9206df35750e402ade923
 </body>
 </html>
