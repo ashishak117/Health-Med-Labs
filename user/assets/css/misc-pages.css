@@ -35,7 +35,15 @@ body.simple-page {
 
 .simple-page-footer p {
   text-align: center;
+<<<<<<< HEAD
   margin-bottom: 190px; }
+=======
+<<<<<<< HEAD
+  margin-bottom: 5px; }
+=======
+  margin-bottom: 190px; }
+>>>>>>> 67fac462b9139791b3f9206df35750e402ade923
+>>>>>>> 21622c928cc7d80a0decbfac0a1f471a55ac53eb
 
 .simple-page-footer a {
   color: #0B1F52;
