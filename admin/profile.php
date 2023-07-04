@@ -92,7 +92,7 @@ foreach($results as $row)
                 </div>
               </div>
               <div class="form-group">
-                <label for="email2" class="col-sm-3 control-label">Email:</label>
+                <label for="email@gmail.com" class="col-sm-3 control-label">Email:</label>
                 <div class="col-sm-9">
                   <input type="email" class="form-control" id="email2" name="email" value="<?php  echo $row->Email;?>" required='true'>
                 </div>

@@ -180,7 +180,7 @@ echo '<script>alert("Your Appointment has been taken successfully. Appointment n
                 <input type="text" class="form-control" id="mobnum" name="mobnum" maxlength="10" pattern="[0-9]+" required="true">
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Email ID</label>
+                <label for="example@gmail.com">Email ID</label>
                 <input type="email" class="form-control" id="email" name="email" required="true">
               </div>
 							<div class="form-group">
