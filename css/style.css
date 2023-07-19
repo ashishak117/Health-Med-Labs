@@ -51,16 +51,7 @@ body{
 }
 .header-top {
   padding: 1.0em 0;
-<<<<<<< HEAD
   background: linear-gradient(to bottom right, #e9f1fa, #e9f1fa);
-=======
-<<<<<<< HEAD
-  background: linear-gradient(to bottom right, #e3e3e3, #221bdc);
->>>>>>> 21622c928cc7d80a0decbfac0a1f471a55ac53eb
-  box-shadow: 0 5px 8px 1px rgba(0,0,0,.09);
-=======
-  background: linear-gradient(to bottom right, #d5d3eb #E9F1FA);
->>>>>>> 67fac462b9139791b3f9206df35750e402ade923
  }
 .logo{
 	float: left;
@@ -208,16 +199,7 @@ span.glyphicon.glyphicon-pushpin {
 }
 .gallery {
   padding: 4em 0;
-<<<<<<< HEAD
   background:#e9f1fa;
-=======
-<<<<<<< HEAD
-  background:#ffffff;
->>>>>>> 21622c928cc7d80a0decbfac0a1f471a55ac53eb
-  /* background: url("../images/Home1.png") no-repeat 1036px 862.3px; */
-=======
-  background:#e9f1fa;
->>>>>>> 67fac462b9139791b3f9206df35750e402ade923
   }
 .da-thumbs {
 	list-style: none;
@@ -243,11 +225,7 @@ span.glyphicon.glyphicon-pushpin {
 }
 .da-thumbs li a div {
   position: absolute;
-<<<<<<< HEAD
-  background: #8364ff93;
-=======
   background: rgba(202,200,229, 0.84);
->>>>>>> 21622c928cc7d80a0decbfac0a1f471a55ac53eb
   width: 100%;
   height: 100%;
 }
@@ -534,19 +512,10 @@ img.zoom-img {
 	border: none;
 }
 .footer-section{
-<<<<<<< HEAD
+
 	padding: 2em 0.5;
 	text-align:center;
 	background:#CAC8E5;
-=======
-	padding:10em 0;
-	text-align:center;
-<<<<<<< HEAD
-	background:#ffffff;
-=======
-	background:#ececec;
->>>>>>> 67fac462b9139791b3f9206df35750e402ade923
->>>>>>> 21622c928cc7d80a0decbfac0a1f471a55ac53eb
 }
 .footer-bottom {
 	margin-top: 0em;

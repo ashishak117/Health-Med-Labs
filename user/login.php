@@ -88,14 +88,8 @@ echo "<script>alert('Invalid Details');</script>";
 </div><!-- #login-form -->
 
 <div class="simple-page-footer">
-<<<<<<< HEAD
-	<p><a href="forgot-password.php">FORGOT YOUR PASSWORD ?</a><br>
-	<a href="signup.php">Don't have an account ? CREATE AN ACCOUNT ?</a></p>
-
-=======
 	<p><a href="forgot-password.php">FORGOT YOUR PASSWORD ?</a><br><a href="signup.php">Don't have an account? CREATE AN ACCOUNT</a></p>
 	<!-- <p><a href="signup.php">Don't have an account? CREATE AN ACCOUNT</a></p> -->
->>>>>>> 21622c928cc7d80a0decbfac0a1f471a55ac53eb
 	
 </div><!-- .simple-page-footer -->
 
