@@ -7,7 +7,8 @@ if (strlen($_SESSION['odlmsuid']==0)) {
   } else{
 
 if(isset($_POST['submit']))
-{
+  {
+
 $uid=$_SESSION['odlmsuid'];
 $pname=$_POST['pname'];
 $gender=$_POST['gender'];
@@ -20,25 +21,11 @@ $aptnumber=mt_rand(100000000, 999999999);
 $pres=$_FILES["pres"]["name"];
 $extension = substr($pres,strlen($pres)-4,strlen($pres));
 $allowed_extensions = array(".jpg","jpeg",".png",".gif",".pdf");
-// function isDateGreaterThanCurrent($aptdate) {
-// 	// Get the current date
-// 	$currentDate = date('Y-m-d');
-  
-// 	// Compare the selected date with the current date
-// 	if ($aptdate < $currentDate) {
-// 		return true;
-// 	}
-// 	return false;
-//   } 
 if(!empty($pres))
 {
 if(!in_array($extension,$allowed_extensions))
 {
 echo "<script>alert('Prescription has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
-}
-$currentDate=date('d-m-Y');
-if ($aptdate<$currentDate) {
-	echo "<script>alert('Appointment date invalid');</script>";
 }
 else
 {
@@ -193,7 +180,7 @@ echo '<script>alert("Your Appointment has been taken successfully. Appointment n
                 <input type="text" class="form-control" id="mobnum" name="mobnum" maxlength="10" pattern="[0-9]+" required="true">
               </div>
               <div class="form-group">
-                <label for="example@gmail.com">Email ID</label>
+                <label for="exampleInputEmail1">Email ID</label>
                 <input type="email" class="form-control" id="email" name="email" required="true">
               </div>
 							<div class="form-group">
@@ -210,7 +197,7 @@ echo '<script>alert("Your Appointment has been taken successfully. Appointment n
 							</div>
               <div class="form-group">
                 <label for="exampleInputFile" style="color: red" required="true">Select Test</label>
-                <table class="table table-bordered"> <thead> <tr> <th>#</th> <th>Test Name</th> <th>Test Price</th> <th>Action</th> </tr> </thead> <tbody>
+                <table class="table table-bordered"> <thead> <tr> <th>#</th> <th>Test Name</th> <th>Test Price</th> <th>Select</th> </tr> </thead> <tbody>
 <?php
 $sql="SELECT * from tbllabtest";
 $query = $dbh -> prepare($sql);

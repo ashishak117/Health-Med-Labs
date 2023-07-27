@@ -190,8 +190,7 @@
 						<a href="images/g9.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g9.jpg" alt="" />
 							<div>
-								<h5>Aryan M</h5>
-								<h5>Ashish M</h5>
+								<h5>Aryan</h5>
 
 								<span>Finest Lab at your doorstep. Quick and seamless process with humble and well trained staff. Delivers as promised. Highly recommended</span>
 							</div>

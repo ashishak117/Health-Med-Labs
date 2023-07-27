@@ -24,6 +24,7 @@ echo $_SESSION['odlmsuid'];
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/core.css">
 	<link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/dash.css">
 	<!-- endbuild -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
 	<script src="libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
@@ -73,7 +74,20 @@ foreach($results as $row)
 					
 				</div><!-- .widget -->
 			</div>
+			<div class="slider-container">
+    <div class="slider">
+      <img src="images/g2.jpg" alt="Image 1">
+      <img src="images/g3.jpg" alt="Image 2">
+      <img src="images/Home1.png" alt="Image 3">
+	  <img src="images/loginadm2.png" alt="Image 4">
+	  <img src="images/g1.jpg" alt="Image 5">
+	  <img src="images/b3.jpg" alt="Image 6">
+	  <img src="images/p3.jpg" alt="Image 7">
+      <!-- Add more images as needed -->
+    </div>
+  </div>
 
+  <script src="assets/js/dash.js"></script>
 		<div class="row">
 		
 	</section><!-- #dash-content -->
